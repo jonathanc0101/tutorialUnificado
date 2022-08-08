@@ -10,7 +10,7 @@ public class Target : MonoBehaviour
     private float xRange = 4;
     private float yPos = -6;
     private float maxTorque = 6;
-    private float minForce = 19;
+    private float minForce = 15;
     private float maxForce = 22;
     private Rigidbody targetRb;
     public ParticleSystem explosionParticle;
