@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private float distToGround;
     private Camera cam;
 
+    public GameObject mobsPrefab;
+
     private float cameraHeight;
 
     void Start()
@@ -43,6 +45,17 @@ public class PlayerController : MonoBehaviour
             {
                 transform.LookAt(hit.point);
                 playerRB.AddRelativeForce(Vector3.forward * moveSpeed, ForceMode.Force);
+            }
+        }
+
+        if (Input.GetMouseButton(1) && this.name == "MainPlayer")
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 100, LayerMask.NameToLayer("TransparentFX")))
+            {
+
+                Instantiate(mobsPrefab, (hit.point - transform.position) /2, new Quaternion());
             }
         }
 
