@@ -47,6 +47,11 @@ public class LevelChangeManagerSingleton : MonoBehaviour
         {
             CargarEscenaAnterior();
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RecargarEscena();
+        }
     }
 
     public void CargarEscenaSiguiente()
@@ -59,6 +64,10 @@ public class LevelChangeManagerSingleton : MonoBehaviour
         SceneManager.LoadScene((EscenaActual() - 1 + cantidadDeEscenas) % cantidadDeEscenas);
     }
 
+    public void RecargarEscena()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     int EscenaActual()
     {
         return SceneManager.GetActiveScene().buildIndex;

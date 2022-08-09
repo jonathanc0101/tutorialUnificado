@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/proyectos/Prototype 3/Assets/Scenes/Prototype 3.unity
     guid: dc8c9f3efd746429fa6f9482dc779492
   - enabled: 1
+    path: Assets/proyectos/Prototype 4/Assets/Challenge 4/Challenge 4.unity
+    guid: bafab91dee6434fbcb28a5a16e78982f
+  - enabled: 1
     path: Assets/proyectos/Prototype 5/Assets/Scenes/Prototype 5.unity
     guid: 25879dabf79477347b23376871bcc454
   m_configObjects: {}
